@@ -1,11 +1,11 @@
 <?php
 $host="localhost";
-$username="docbaseadmin";
-$password="admin";
+$username=<db_username>;
+$password=<db_password>;
 
 $connect= mysql_connect($host,$username,$password) or die ('Connection to host failed!'.mysql_error());
 
-$db="docbase";
+$db=<db_schema_name>;
 mysql_select_db($db, $connect) or die('Database not found'.mysql_error());
 
 //echo '<b style="color:#298A08;">Connected to MYSQLi!</b>';
