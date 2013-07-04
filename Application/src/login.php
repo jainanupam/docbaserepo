@@ -18,7 +18,7 @@
 			unset($_SESSION['ERRMSG_ARR']);
 			unset($_SESSION['SESS_MEMBER_ID']);
 			}
-			session_destroy();
+			//session_destroy();
 		?>
 	</td>
   </tr>
