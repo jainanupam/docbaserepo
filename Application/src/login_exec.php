@@ -43,11 +43,11 @@
 	}
  
 	//Create query
-	echo $username . " : " . $password ;
+	//echo $username . " : " . $password ;
 	$qry="SELECT * FROM users WHERE username='$username'";
 	$result=mysql_query($qry);
  
-	echo "result: ".$result;
+	//echo "result: ".$result;
 	
 	//Check whether the query was successful or not
 	if($result) {
@@ -78,7 +78,7 @@
 			}
 		}else {
 			//Login failed
-			$errmsg_arr[] = 'user name and password not found';
+			$errmsg_arr[] = 'user name and/or password not found';
 			$errflag = true;
 			if($errflag) {
 				$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
