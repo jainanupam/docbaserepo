@@ -1,5 +1,5 @@
 <?php
-
+include('authenticate.php');
 // Check for errors
 if($_FILES['file_upload']['error'] > 0){
     die('An error ocurred when uploading. '.$_FILES['file_upload']['error']);
