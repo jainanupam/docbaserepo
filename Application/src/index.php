@@ -40,7 +40,7 @@
     <td><input name="password" type="password" tabindex="2" /></td>
   </tr>
   <tr>
-    <td><div align="right"><a href="#">New User?</a></div></td>
+    <td><div align="right"><a href="register.html">New User?</a></div></td>
     <td><input name="" type="submit" value="login" tabindex="3" /></td>
   </tr>
 </table>

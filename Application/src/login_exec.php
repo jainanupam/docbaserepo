@@ -38,7 +38,7 @@
 	if($errflag) {
 		$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
 		session_write_close();
-		header("location: login.php");
+		header("location: index.php");
 		exit();
 	}
  
@@ -70,7 +70,7 @@
 				if($errflag) {
 					$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
 					session_write_close();
-					header("location: login.php");
+					header("location: index.php");
 					exit();
 				
 				}*/
@@ -83,7 +83,7 @@
 			if($errflag) {
 				$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
 				session_write_close();
-				header("location: login.php");
+				header("location: index.php");
 				exit();
 			}
 		}

@@ -20,7 +20,7 @@ else if(strlen($_POST['password']) < 6){
 }
 else{
    mysql_query("INSERT into users VALUES ('".$_POST['username']."', md5('".$_POST['password']."'))") or die(mysql_error());
-   header('Location: index.html');
+   header('Location: register.html');
    //echo(md5($_POST['password']));
 }
 ?>
