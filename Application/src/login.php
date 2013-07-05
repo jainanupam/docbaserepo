@@ -9,6 +9,7 @@
     <td colspan="2">
 		<!--the code bellow is used to display the message of the input validation-->
 		 <?php
+			session_start();
 			if( isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 )
 			{
 				echo '<ul class="err">';
@@ -20,7 +21,7 @@
 			unset($_SESSION['ERRMSG_ARR']);
 			unset($_SESSION['SESS_MEMBER_ID']);
 			}
-			//session_destroy();
+			session_destroy();
 		?>
 	</td>
   </tr>
