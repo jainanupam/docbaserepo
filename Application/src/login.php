@@ -4,7 +4,13 @@
 <body>
 
 <form name="loginform" action="login_exec.php" method="post">
+<div align="center" style="border:solid;border-color:blueviolet;font-family: Arial;">
 <table width="309" border="0" align="center" cellpadding="2" cellspacing="5">
+	<tr>
+		<td>
+			Enter your credentials to proceed
+		</td>
+	</tr>
   <tr>
     <td colspan="2">
 		<!--the code bellow is used to display the message of the input validation-->
@@ -34,10 +40,11 @@
     <td><input name="password" type="password" tabindex="2" /></td>
   </tr>
   <tr>
-    <td><div align="right"></div></td>
+    <td><div align="right"><a href="#">New User?</a></div></td>
     <td><input name="" type="submit" value="login" tabindex="3" /></td>
   </tr>
 </table>
+</div>
 </form>
 </body>
 </html>
