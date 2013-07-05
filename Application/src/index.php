@@ -7,7 +7,7 @@
 <div align="center" style="border:solid;border-color:blueviolet;font-family: Arial;">
 <table width="309" border="0" align="center" cellpadding="2" cellspacing="5">
 	<tr>
-		<td>
+		<td colspan="2" align="center">
 			Enter your credentials to proceed
 		</td>
 	</tr>

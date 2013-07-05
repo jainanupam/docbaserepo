@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Untitled Document</title>
+<title>Welcome!</title>
 <style type="text/css">
 <!--
 .style1 {
@@ -17,8 +17,9 @@
 </head>
  
 <body>
-<p align="center" class="style1">Login successfully </p>
+<p align="center" class="style1">Welcome back <?php	echo $_SESSION['SESS_MEMBER_ID'];?>
+ </p>
 <p align="center">This page is the home, you can put some stuff here......</p>
-<p align="center"><a href="login.php">logout</a></p>
+<p align="center"><a href="index.php">logout</a></p>
 </body>
 </html>
