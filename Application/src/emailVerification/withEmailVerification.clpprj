@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="C:\wamp\www\emailVerification\withEmailVerification.clpprj">
+	<settings><PM_URL><![CDATA[http://localhost/emailVerification/]]></PM_URL><PM_HOME_URL><![CDATA[http://localhost/emailVerification/]]></PM_HOME_URL><PM_LIBS><![CDATA[]]></PM_LIBS><PM_FTP_CONNECTION><![CDATA[]]></PM_FTP_CONNECTION><PM_FTP_DIR><![CDATA[]]></PM_FTP_DIR><PM_FTP_UPLOAD_ON_SAVE><![CDATA[INT:0]]></PM_FTP_UPLOAD_ON_SAVE></settings><removed value=";"/><added value=""/><errors version="4.5">
+	</errors>
+	<codestructure version="4.6.1">
+		<phptree>
+			<treenode node="database_connection.php;PHP:PHP Include;C:\wamp\www\emailVerification\activate.php;f10;52;33;52;;C:\wamp\www\emailVerification\login.php;f10;5;33;5;;C:\wamp\www\emailVerification\index.php;f10;5;33;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="EMAIL;PHP:PHP Word;C:\wamp\www\emailVerification\database_connection.php;f8;16;13;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="_GET;PHP:Var Name;C:\wamp\www\emailVerification\activate.php;f10;54;15;54;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="_POST;PHP:Var Name;C:\wamp\www\emailVerification\login.php;f10;6;16;6;;C:\wamp\www\emailVerification\index.php;f10;6;16;6;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="_SESSION;PHP:Var Name;C:\wamp\www\emailVerification\page.php;f14;4;23;4;;C:\wamp\www\emailVerification\login.php;f12;56;21;56;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="activation;PHP:Var Name;C:\wamp\www\emailVerification\index.php;f12;52;23;52;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="dbc;PHP:Var Name;C:\wamp\www\emailVerification\activate.php;f44;72;48;72;;C:\wamp\www\emailVerification\database_connection.php;f0;23;4;23;;C:\wamp\www\emailVerification\login.php;f49;45;53;45;;C:\wamp\www\emailVerification\index.php;f44;43;48;43;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="email;PHP:Var Name;C:\wamp\www\emailVerification\activate.php;f4;56;10;56;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="Email;PHP:Var Name;C:\wamp\www\emailVerification\login.php;f12;19;18;19;;C:\wamp\www\emailVerification\index.php;f12;21;18;21;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="error;PHP:Var Name;C:\wamp\www\emailVerification\login.php;f4;9;10;9;;C:\wamp\www\emailVerification\index.php;f4;7;10;7;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="headers;PHP:Var Name;C:\wamp\www\emailVerification\fakemail.php;f0;4;8;4;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="key;PHP:Var Name;C:\wamp\www\emailVerification\activate.php;f4;60;8;60;;C:\wamp\www\emailVerification\login.php;f27;72;31;72;;C:\wamp\www\emailVerification\index.php;f27;97;31;97;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="message;PHP:Var Name;C:\wamp\www\emailVerification\fakemail.php;f0;3;8;3;;C:\wamp\www\emailVerification\index.php;f16;67;24;67;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="msg_error;PHP:Var Name;C:\wamp\www\emailVerification\login.php;f12;64;22;64;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="name;PHP:Var Name;C:\wamp\www\emailVerification\index.php;f8;11;13;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="Password;PHP:Var Name;C:\wamp\www\emailVerification\login.php;f8;31;17;31;;C:\wamp\www\emailVerification\index.php;f8;33;17;33;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="query_activate_account;PHP:Var Name;C:\wamp\www\emailVerification\activate.php;f4;69;27;69;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="query_check_credentials;PHP:Var Name;C:\wamp\www\emailVerification\login.php;f3;41;27;41;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="query_insert_user;PHP:Var Name;C:\wamp\www\emailVerification\index.php;f12;55;30;55;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="query_verify_email;PHP:Var Name;C:\wamp\www\emailVerification\index.php;f8;42;27;42;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="result_activate_account;PHP:Var Name;C:\wamp\www\emailVerification\activate.php;f4;72;28;72;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="result_check_credentials;PHP:Var Name;C:\wamp\www\emailVerification\login.php;f8;45;33;45;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="result_insert_user;PHP:Var Name;C:\wamp\www\emailVerification\index.php;f12;58;31;58;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="result_verify_email;PHP:Var Name;C:\wamp\www\emailVerification\index.php;f8;43;28;43;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="subject;PHP:Var Name;C:\wamp\www\emailVerification\fakemail.php;f0;2;8;2;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="to;PHP:Var Name;C:\wamp\www\emailVerification\fakemail.php;f0;1;3;1;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+			<treenode node="values;PHP:Var Name;C:\wamp\www\emailVerification\login.php;f35;72;42;72;;C:\wamp\www\emailVerification\index.php;f35;97;42;97;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
+		</phptree>
+		<jstree>
+		</jstree>
+	</codestructure><cakedata>
+	</cakedata>
+	<dplmenupath>
+	</dplmenupath><smartyassings>
+	</smartyassings><yiidata>
+	</yiidata>
+	<todoblock>
+	</todoblock>
+	<filescache>
+		<file name="C:\wamp\www\emailVerification\page.php" crc="909379960"/>
+		<file name="C:\wamp\www\emailVerification\login.php" crc="-1850999222"/>
+		<file name="C:\wamp\www\emailVerification\index.php" crc="-1425994432"/>
+		<file name="C:\wamp\www\emailVerification\fakemail.php" crc="1285491359"/>
+		<file name="C:\wamp\www\emailVerification\database_connection.php" crc="-652862266"/>
+		<file name="C:\wamp\www\emailVerification\activate.php" crc="-463660114"/>
+	</filescache>
+</project>
