@@ -38,8 +38,8 @@ session_start();
 
        
 
-       // $query_check_credentials = "SELECT * FROM members WHERE (Email='$Email' AND password='$Password') AND Activation IS NULL";
-		 $query_check_credentials = "SELECT * FROM members WHERE (Email='$Email' AND password='$Password')";
+        $query_check_credentials = "SELECT * FROM members WHERE (Email='$Email' AND password='$Password') AND Activation IS NULL";
+	//	 $query_check_credentials = "SELECT * FROM members WHERE (Email='$Email' AND password='$Password')";
    
         
 
