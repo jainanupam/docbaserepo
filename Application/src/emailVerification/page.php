@@ -47,7 +47,6 @@ require_once 'Upload.class.php';
      color: #4F8A10;
 	background-color: #DFF2BF;
 	background-image:url('images/success.png');
-     
 }
 </style>
 </head>
@@ -60,21 +59,23 @@ require_once 'Upload.class.php';
       <fieldset>
           <legend>Upload Images</legend>
           <input type="hidden" name="<?php echo ini_get('session.upload_progress.name');?>" value="<?php Upload::UPLOAD_PROGRESS_PREFIX ?>" />
-          <label for="file">Images: <input type="file" name="files[]" id="file" multiple="multiple" accept="image/*" required="required" />
-		  <br/>
-          <small><em>You can select multiple files at once by clicking multiple files while holding down the "CTRL" key.</em></small></label>
+          <label for="file">Images: 
+		  	<input type="file" name="files[]" id="file" multiple="multiple" accept="image/*" required="required"/>
+			<br/>
+          		<small>
+					<em>You can select multiple files at once by clicking multiple files while holding down the "CTRL" key.</em>
+				</small>
+			</label>
           <button type="submit" id="upload">Upload</button>
-          <button type="reset" id="cancel">Cancel Upload</button>
+          <button type="reset" id="cancel">Cancel</button>
 
       <!-- Progress bar here -->
       <div id="upload_progress" class="hidden center progress">
           <div class="bar"></div>
       </div>
-
       </fieldset>
   </form>
   <iframe id="result_frame" name="result_frame" src="about:blank"></iframe>
-
 </div>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script src="./static/js/ProgressBar.class.js"></script>
