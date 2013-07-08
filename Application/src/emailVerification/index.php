@@ -1,6 +1,6 @@
-/*registration page*/
-<?php
 
+<?php
+/*registration page*/
 
 
 include ('database_connection.php');
@@ -145,128 +145,66 @@ echo '<div class="errormsgbox"> <ol>';
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Registration Form</title>
-
-
-    
-    
-    
-<style type="text/css">
-body {
-	font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
-	font-size:12px;
-}
-.registration_form {
-	margin:0 auto;
-	width:500px;
-	padding:14px;
-}
-label {
-	width: 10em;
-	float: left;
-	margin-right: 0.5em;
-	display: block
-}
-.submit {
-	float:right;
-}
-fieldset {
-	background:#EBF4FB none repeat scroll 0 0;
-	border:2px solid #B7DDF2;
-	width: 500px;
-}
-legend {
-	color: #fff;
-	background: #80D3E2;
-	border: 1px solid #781351;
-	padding: 2px 6px
-}
-.elements {
-	padding:10px;
-}
-p {
-	border-bottom:1px solid #B7DDF2;
-	color:#666666;
-	font-size:11px;
-	margin-bottom:20px;
-	padding-bottom:10px;
-}
-a{
-    color:#0099FF;
-font-weight:bold;
-}
-
-/* Box Style */
-
-
- .success, .warning, .errormsgbox, .validation {
-	border: 1px solid;
-	margin: 0 auto;
-	padding:10px 5px 10px 50px;
-	background-repeat: no-repeat;
-	background-position: 10px center;
-     font-weight:bold;
-     width:450px;
-     
-}
-
-.success {
-   
-	color: #4F8A10;
-	background-color: #DFF2BF;
-	background-image:url('images/success.png');
-}
-.warning {
-
-	color: #9F6000;
-	background-color: #FEEFB3;
-	background-image: url('images/warning.png');
-}
-.errormsgbox {
- 
-	color: #D8000C;
-	background-color: #FFBABA;
-	background-image: url('images/error.png');
-	
-}
-.validation {
- 
-	color: #D63301;
-	background-color: #FFCCBA;
-	background-image: url('images/error.png');
-}
-
-
-
-</style>
-
+<link rel="stylesheet" href="./static/css/bootstrap.css" />
 </head>
 <body>
 
 
-<form action="index.php" method="post" class="registration_form">
-  <fieldset>
-    <legend>Registration Form </legend>
-
-    <p>Create A new Account <span style="background:#EAEAEA none repeat scroll 0 0;line-height:1;margin-left:210px;;padding:5px 7px;">Already a member? <a href="login.php">Log in</a></span> </p>
-    
-    <div class="elements">
-      <label for="name">Name :</label>
-      <input type="text" id="name" name="name" size="25" />
-    </div>
-    <div class="elements">
-      <label for="e-mail">E-mail :</label>
-      <input type="text" id="e-mail" name="e-mail" size="25" />
-    </div>
-    <div class="elements">
-      <label for="Password">Password:</label>
-      <input type="password" id="Password" name="Password" size="25" />
-    </div>
-    <div class="submit">
-     <input type="hidden" name="formsubmitted" value="TRUE" />
-      <input type="submit" value="Register" />
-    </div>
-  </fieldset>
+<form action="index.php" method="post" class="form-horizontal">
+    <legend><p class="text-left">Registration Form</p><p class="text-right">Already a member?<a class="btn btn-info" href="login.php">Log in</a></p></span></p></legend>
+  
+  <div class="container">
+        	<div class="row-fluid">
+            	<div class="span12">
+                    <div class="span6">
+                    	<div class="area">
+                            <form class="form-horizontal">
+                                <div class="heading">
+                                    <h4 class="form-heading">Create a new Account</h4>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="name">Name</label>
+                                    <div class="controls">
+                                        <input type="text" id="name" name="name" placeholder="E.g. Bruce Wayne" required>
+                                    </div>
+                                </div>
+          
+                                <div class="control-group">
+                                    <label class="control-label" for="e-mail">Email</label>
+                                    <div class="controls">
+                                        <input type="text" id="e-mail" name="e-mail" placeholder="E.g. test@batman.com" required>
+                                    </div>
+                                </div>
+								
+                                <div class="control-group">
+                                    <label class="control-label" for="password">Password</label>
+                                    <div class="controls">
+                                        <input type="password" id="password" name="password" placeholder="##########">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <div class="controls">
+                                        <label class="checkbox">
+                                            <input type="checkbox"> I agree all your <a href="#">Terms of Services</a>
+                                        </label>
+										<input type="hidden" name="formsubmitted" value="TRUE" />
+                                        <button type="submit" class="btn btn-success">Sign Up</button>
+										<button type="button" class="btn">Help</button>
+                                    </div>
+                                </div>	
+                                <div class="alert alert-info">
+                                    <button type="button" class="close" data-dismiss="alert">×</button>
+                                    <strong>Confirmation: </strong> A confirmation email has been sent to your email.<br>
+                                    Thank you for your registration.
+                                </div>
+                            </form>	
+						</div>                            
+                    </div>
+                </div>
+            </div>
+        </div>
+  
 </form>
-Go Back to <a href="#">Account Verification on sign up</a>
+
 </body>
 </html>

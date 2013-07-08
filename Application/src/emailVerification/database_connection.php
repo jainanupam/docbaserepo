@@ -1,6 +1,6 @@
-/*to create database connection*/
-<?php
 
+<?php
+/*to create database connection*/
 /*Define constant to connect to database */
 DEFINE('DATABASE_USER', 'root');
 DEFINE('DATABASE_PASSWORD', 'admin');
