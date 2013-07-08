@@ -30,10 +30,10 @@ if (isset($_POST['formsubmitted'])) {
     }
 
 
-    if (empty($_POST['Password'])) {
+    if (empty($_POST['password'])) {
         $error[] = 'Please Enter Your Password ';
     } else {
-        $Password = $_POST['Password'];
+        $Password = $_POST['password'];
     }
 
 

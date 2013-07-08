@@ -1,8 +1,5 @@
-/*When user is already registered and tries to login to the application*/
 <?php
-
-
-
+/*When user is already registered and tries to login to the application*/
 include ('database_connection.php');
 if (isset($_POST['formsubmitted'])) {
     // Initialize a session:
@@ -26,10 +23,10 @@ session_start();
     }
 
 
-    if (empty($_POST['Password'])) {
+    if (empty($_POST['password'])) {
         $error[] = 'Please Enter Your Password ';
     } else {
-        $Password = $_POST['Password'];
+        $Password = $_POST['password'];
     }
 
 
@@ -69,7 +66,7 @@ session_start();
         
         
 
-echo '<div class="errormsgbox"> <ol>';
+echo '<div class="alert alert-error"><a class="close" data-dismiss="alert" href="#">×</a> <ol>';
         foreach ($error as $key => $values) {
             
             echo '	<li>'.$values.'</li>';
@@ -84,7 +81,7 @@ echo '<div class="errormsgbox"> <ol>';
     
     if(isset($msg_error)){
         
-        echo '<div class="warning">'.$msg_error.' </div>';
+        echo '<div class="alert alert-error"><a class="close" data-dismiss="alert" href="#">×</a>'.$msg_error.' </div>';
     }
     /// var_dump($error);
     mysqli_close($dbc);
@@ -98,125 +95,28 @@ echo '<div class="errormsgbox"> <ol>';
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Login Form</title>
-
-
-    
-    
-    
-<style type="text/css">
-body {
-	font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
-	font-size:12px;
-}
-.registration_form {
-	margin:0 auto;
-	width:500px;
-	padding:14px;
-}
-label {
-	width: 10em;
-	float: left;
-	margin-right: 0.5em;
-	display: block
-}
-.submit {
-	float:right;
-}
-fieldset {
-	background:#EBF4FB none repeat scroll 0 0;
-	border:2px solid #B7DDF2;
-	width: 500px;
-}
-legend {
-	color: #fff;
-	background: #80D3E2;
-	border: 1px solid #781351;
-	padding: 2px 6px
-}
-.elements {
-	padding:10px;
-}
-p {
-	border-bottom:1px solid #B7DDF2;
-	color:#666666;
-	font-size:11px;
-	margin-bottom:20px;
-	padding-bottom:10px;
-}
-a{
-    color:#0099FF;
-font-weight:bold;
-}
-
-/* Box Style */
-
-
- .success, .warning, .errormsgbox, .validation {
-	border: 1px solid;
-	margin: 0 auto;
-	padding:10px 5px 10px 60px;
-	background-repeat: no-repeat;
-	background-position: 10px center;
-     font-weight:bold;
-     width:450px;
-     
-}
-
-.success {
-   
-	color: #4F8A10;
-	background-color: #DFF2BF;
-	background-image:url('images/success.png');
-}
-.warning {
-
-	color: #9F6000;
-	background-color: #FEEFB3;
-	background-image: url('images/warning.png');
-}
-.errormsgbox {
- 
-	color: #D8000C;
-	background-color: #FFBABA;
-	background-image: url('images/error.png');
-	
-}
-.validation {
- 
-	color: #D63301;
-	background-color: #FFCCBA;
-	background-image: url('images/error.png');
-}
-
-
-
-</style>
+<link rel="stylesheet" href="./static/css/bootstrap.css" />
 
 </head>
-<body>
-
-
-<form action="login.php" method="post" class="registration_form">
-  <fieldset>
-    <legend>Login Form  </legend>
-
-    <p>Enter Your username and Password Below  </p>
-    
-    <div class="elements">
-      <label for="name">Email :</label>
-      <input type="text" id="e-mail" name="e-mail" size="25" />
-    </div>
-  
-    <div class="elements">
-      <label for="Password">Password:</label>
-      <input type="password" id="Password" name="Password" size="25" />
-    </div>
-    <div class="submit">
-     <input type="hidden" name="formsubmitted" value="TRUE" />
-      <input type="submit" value="Login" />
-    </div>
-  </fieldset>
-</form>
-Go Back to <a href="#">Account Verification on sign up</a>
+<body>  
+  <div class="container">
+	<div class="row">
+		<div class="span4 offset4 well">
+			<legend>Please Sign In</legend>
+          	<div class="alert alert-error">
+                <a class="close" data-dismiss="alert" href="#">×</a>Incorrect Username or Password!
+            </div>
+			<form method="POST" action="login.php" accept-charset="UTF-8">
+			<input type="text" id="e-mail" class="span4" name="e-mail" placeholder="test@batman.com">
+			<input type="password" id="password" class="span4" name="password" placeholder="Password">
+            <label class="checkbox">
+            	<input type="checkbox" name="remember" value="1"> Remember Me
+            </label>
+			<input type="hidden" name="formsubmitted" value="TRUE" />
+			<button type="submit" name="submit" class="btn btn-info btn-block">Sign in</button>
+			</form>    
+		</div>
+	</div>
+</div>
 </body>
 </html>
