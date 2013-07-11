@@ -73,9 +73,8 @@ if (isset($_POST['formsubmitted']))
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Login Form</title>
 <link rel="stylesheet" href="./static/css/bootstrap.css" />
-<script type="text/javascript" src="static/js/jquery.js"></script>
-<script type="text/javascript">
-jQuery.fn.shake = function(intShakes, intDistance, intDuration) {
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+$shake = function(intShakes, intDistance, intDuration) {
     this.each(function() {
         $(this).css("position","relative"); 
         for (var x=1; x<=intShakes; x++) {
@@ -86,9 +85,17 @@ jQuery.fn.shake = function(intShakes, intDistance, intDuration) {
   });
 return this;
 };
-
-$("#signin").click(function(){
-	$("#container").shake(3,7,800);
+$( document ).ready(function(){
+	$("#signin").click(function(){
+	$(".#container").shake(3,7,800);
+});
+}
+</script>
+<script>
+$(document).ready(function(){
+  $(".close").click(function(){
+    $("#messageBox").hide();
+  });
 });
 </script>
 </head>
@@ -101,7 +108,7 @@ $("#signin").click(function(){
 			global $statusInactive;
 			if($statusInactive)
 			{ ?>
-				<div class="alert alert-error">
+				<div id ="messageBox" class="alert alert-error">
 					<a class="close" data-dismiss="alert" href="#">×</a>
 					<?php 
 						global $msg_error;
@@ -112,7 +119,7 @@ $("#signin").click(function(){
 			global $statusCredentials;
 			if($statusCredentials)
 			{
-				echo '<div class="alert alert-error"><a class="close" data-dismiss="alert" href="#">×</a> <ol>';
+				echo '<div id ="messageBox" class="alert alert-error"><a class="close" data-dismiss="alert" href="#">×</a> <ol>';
        			foreach ($error as $key => $values) 
 				{    
             		echo '	<li>'.$values.'</li>';

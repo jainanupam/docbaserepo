@@ -1,4 +1,5 @@
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+</script>
 <?php
 /*registration page*/
 include ('database_connection.php');
@@ -56,11 +57,7 @@ if (isset($_POST['formsubmitted']))
 		{ // IF no previous user is using this email .
             // Create a unique  activation code:
             $activation = md5(uniqid(rand(), true));
-
-
             $query_insert_user = "INSERT INTO `members` ( `Username`, `Email`, `Password`, `Activation`) VALUES ( '$name', '$Email', '$Password', '$activation')";
-
-
             $result_insert_user = mysqli_query($dbc, $query_insert_user);
             if (!$result_insert_user)
 			{
@@ -134,10 +131,16 @@ if (isset($_POST['formsubmitted']))
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Registration Form</title>
 <link rel="stylesheet" href="./static/css/bootstrap.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+<script>
+$(document).ready(function(){
+  $(".close").click(function(){
+    $("#messageBox").hide();
+  });
+});
+</script>
 </head>
 <body>
-
-
 <form action="index.php" method="post" class="form-horizontal">
     <legend><p class="text-left">Registration Form</p><p class="text-right">Already a member?<a class="btn btn-info" href="login.php">Log in</a></p></span></p></legend>
   
@@ -185,8 +188,8 @@ if (isset($_POST['formsubmitted']))
 								global $result;
 								if($result)
 								{?>
-									<div id="confirmationAltert" class="alert alert-info">
-                                    <button type="button" class="close" data-dismiss="alert">×</button>
+									<div id="messageBox" class="alert alert-info">
+                                    <a class="close" data-dismiss="alert" href="#">×</a>
                                     <strong>Confirmation: </strong> A confirmation email has been sent to your email.<br>
                                     Thank you for your registration.
                                 </div>
@@ -195,15 +198,15 @@ if (isset($_POST['formsubmitted']))
 								global $systemError;
 								if($systemError)
 								{?>
-									<div id="systemErrorAltert" class="alert alert-info">
-                                    <button type="button" class="close" data-dismiss="alert">×</button>
+									<div id="messageBox" class="alert alert-info">
+                                    <a class="close" data-dismiss="alert" href="#">×</a>
                                     <strong>System Error: </strong>You could not be registered due to a system error. We apologize for any inconvenience.<br>
 						<?php   }
 								global $alreadyRegistered;
 								if($alreadyRegistered)
 								{ ?>
-									<div id="systemErrorAltert" class="alert alert-info">
-                                    <button type="button" class="close" data-dismiss="alert">×</button>
+									<div id="messageBox" class="alert alert-info">
+                                   <a class="close" data-dismiss="alert" href="#">×</a>
                                     <strong>System Error: </strong>That email address has already been registered.<br>								
 								<?php 
 								} ?>	
