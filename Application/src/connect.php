@@ -1,12 +1,11 @@
 <?php
-$host="localhost";
-$username=<db_username>;
-$password=<db_password>;
 
-$connect= mysql_connect($host,$username,$password) or die ('Connection to host failed!'.mysql_error());
+include('/config/config.php');
 
-$db=<db_schema_name>;
-mysql_select_db($db, $connect) or die('Database not found'.mysql_error());
+$connect= mysql_connect(DATABASE_HOST,DATABASE_USER,DATABASE_PASSWORD) or die ('Connection to host failed!'.mysql_error());
+
+//$db=<db_schema_name>;
+mysql_select_db(DATABASE_NAME, $connect) or die('Database not found'.mysql_error());
 
 //echo '<b style="color:#298A08;">Connected to MYSQLi!</b>';
 
@@ -35,6 +34,6 @@ if(function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc())
 	undo_magic_quotes_gpc($_POST); 
 	undo_magic_quotes_gpc($_GET); 
 	undo_magic_quotes_gpc($_COOKIE); 
-} 
-	
+}
+
 ?>
