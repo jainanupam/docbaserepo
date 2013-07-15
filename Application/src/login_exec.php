@@ -65,7 +65,7 @@
 				exit();
 			} else {
 				// Login Failed	
-				/*$errmsg_arr[] = 'Incorrect user name/password';
+				$errmsg_arr[] = 'Incorrect user name/password';
 				$errflag = true;
 				if($errflag) {
 					$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
@@ -73,8 +73,8 @@
 					header("location: index.php");
 					exit();
 				
-				}*/
-				die('login failed');
+				}
+				//die('login failed');
 			}
 		}else {
 			//Login failed
