@@ -3,7 +3,7 @@
 include('/config/config.php');
 
 $connect= mysql_connect(DATABASE_HOST,DATABASE_USER,DATABASE_PASSWORD) or die ('Connection to host failed!'.mysql_error());
-
+//$connect = @mysqli_connect(DATABASE_HOST, DATABASE_USER, DATABASE_PASSWORD,DATABASE_NAME);
 //$db=<db_schema_name>;
 mysql_select_db(DATABASE_NAME, $connect) or die('Database not found'.mysql_error());
 

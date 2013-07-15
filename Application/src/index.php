@@ -16,7 +16,7 @@ $(document).ready(function(){
 <div class="row">
 <div class="span4 offset4 well">
 			<legend>Sign in</legend>
-<form name="loginform" action="login_exec.php" method="post">
+<form class="" name="loginform" action="login_exec.php" method="post">
 		<!--the code bellow is used to display the message of the input validation-->
 		 <?php
 			session_start();
@@ -34,12 +34,12 @@ $(document).ready(function(){
 			session_destroy();
 		?>
 	<div>
-		<label class="control-label" for="inputEmail">Username</label>
-		<input class="span4" name="username" type="text" tabindex="1" placeholder="test@batman.com" required/>
+		<label class="control-label" for="username">Username</label>
+		<input class="span4" id="username" name="username" type="text" tabindex="1" placeholder="test@batman.com" required/>
 	</div>
     <div>
-		<label class="control-label" for="inputEmail">Password</label>
-		<input class="span4" name="password" type="password" tabindex="2" placeholder="Password" required/>
+		<label class="control-label" for="password">Password</label>
+		<input class="span4" id="password" name="password" type="password" tabindex="2" placeholder="Password" required/>
 	</div>
   	<div>
 		<label class="checkbox">
