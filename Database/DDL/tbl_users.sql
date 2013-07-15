@@ -1,1 +1,1 @@
-CREATE TABLE IF NOT EXISTS `users` (  `username` varchar(30) NOT NULL,  `password` varchar(32) DEFAULT NULL,  PRIMARY KEY (`username`));
+CREATE TABLE IF NOT EXISTS `users` (  `username` varchar(30) NOT NULL,  `password` varchar(32) DEFAULT NULL,  `email` varchar(255) NOT NULL,  `Activation` varchar(40),  PRIMARY KEY (`username`));
